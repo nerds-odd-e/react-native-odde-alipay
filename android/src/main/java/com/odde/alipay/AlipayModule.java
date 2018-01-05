@@ -58,7 +58,14 @@ public class AlipayModule extends ReactContextBaseJavaModule{
 
     public AlipayModule(ReactApplicationContext reactContext) {
         super(reactContext);
-        EnvUtils.setEnv(EnvUtils.EnvEnum.SANDBOX);
+    }
+
+    @ReactMethod
+    public void useSandbox(boolean use) {
+        if (use)
+            EnvUtils.setEnv(EnvUtils.EnvEnum.SANDBOX);
+        else
+            EnvUtils.setEnv(EnvUtils.EnvEnum.ONLINE);
     }
 
     @ReactMethod
