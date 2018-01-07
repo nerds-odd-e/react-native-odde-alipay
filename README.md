@@ -5,7 +5,7 @@ React Native Module for alipay.com. This is a fork of react-native-yunpeng-alipa
 ## install
 
 ```
-npm install react-native-odde-alipay --save
+yarn add react-native-odde-alipay
 ```
 
 ## Android
@@ -105,3 +105,13 @@ Alipay.pay("signed pay info string").then(function(data){
                 });
 
 ```
+
+### Use Alipay Sandbox (Android only)
+
+```javascript
+Alipay.useSandbox(true);
+
+```
+
+For more detail about sandbox, please refer to [this link](https://docs.open.alipay.com/200/105311).
+
