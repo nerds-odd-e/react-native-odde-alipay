@@ -44,6 +44,11 @@ RCT_REMAP_METHOD(pay, payInfo:(NSString *)payInfo resolver:(RCTPromiseResolveBlo
     }];
 }
 
+RCT_EXPORT_METHOD(useSandbox:(BOOL *)use)
+{
+    // do nothing as Alipay doesn't support sandbox module on iOS
+}
+
 +(void) handleResult:(NSDictionary *)resultDic
 {
     NSString *status = resultDic[@"resultStatus"];
