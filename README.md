@@ -4,7 +4,7 @@ React Native Module for alipay.com. This is a fork of react-native-yunpeng-alipa
 
 ## Install
 
-```
+```sh
 yarn add react-native-odde-alipay
 
 react-native link react-native-odde-alipay
@@ -14,7 +14,7 @@ react-native link react-native-odde-alipay
 
 Add the following activity and permission config to `AndroidManifest.xml`:
 
-```
+```xml
 <activity
   android:name="com.alipay.sdk.app.H5PayActivity"
   android:configChanges="orientation|keyboardHidden|navigation"
@@ -29,7 +29,7 @@ Add the following activity and permission config to `AndroidManifest.xml`:
  </activity>
 ```
 
-```
+```xml
 <uses-permission android:name="android.permission.INTERNET" />
 <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
@@ -51,7 +51,7 @@ Add `URL Schema` as your app id for `URL type` in `info.plist`
 
 Make sure you have these code in `AppDelegate.m` to enable callback
 
-```objective_c
+```objc
 #import "AlipayModule.h"
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url
   sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
@@ -63,11 +63,11 @@ Make sure you have these code in `AppDelegate.m` to enable callback
 
 ### General Usage
 
-```
+```js
 import Alipay from 'react-native-odde-alipay';
 ```
 
-```
+```js
 Alipay.pay("signed pay info string").then(function(data){
                     console.log(data);
                 }, function (err) {
@@ -77,7 +77,7 @@ Alipay.pay("signed pay info string").then(function(data){
 
 ### Use Alipay Sandbox (Android only)
 
-```
+```js
 Alipay.useSandbox(true);
 ```
 
